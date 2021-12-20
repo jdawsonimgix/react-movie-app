@@ -1,3 +1,6 @@
+
+  
+
 * {
 	box-sizing: border-box;
 }
@@ -52,15 +55,7 @@ code {
 	flex-wrap: wrap;
 }
 
-.movie {
-	background-color: #373b69;
-	border-radius: 3px;
-	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-	margin: 1rem;
-	position: relative;
-	overflow: hidden;
-	width: 300px;
-}
+
 .movie-info {
 	display: flex;
 	align-items: center;
@@ -70,6 +65,16 @@ code {
 
 .movie-info h3 {
 	margin: 0;
+}
+
+.movie {
+	background-color: #373b69;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+	width: 300px;
 }
 
 .movie img {
@@ -117,3 +122,24 @@ code {
 .tag.red {
 	color: red;
 }
+
+
+.App {
+	font-family: sans-serif;
+	text-align: center;
+  }
+  
+  /* .imgix-class {
+	filter: grayscale(100%);
+  } */
+  
+  img {
+	width: 300px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+	img {
+	  width: 90vw;
+	}
+  }
+  

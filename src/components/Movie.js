@@ -1,6 +1,8 @@
-
 import React from 'react';
 import Imgix from "react-imgix";
+import "lazysizes";
+// import a plugin
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 
 const setVoteClass = (vote) => {
@@ -15,46 +17,29 @@ const setVoteClass = (vote) => {
 
 const Movie = ({title, poster_path, overview, vote_average, mono}) => (
     <div className='movie'>
-        {/* <img
-            srcSet={
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' +
-                poster_path +
-                '?w=300&h=450&dpr=1&txt=dpr1&q=75&auto=format' +
-                mono +
-                ' 1x,' +
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' +
-                poster_path +
-                '?w=300&h=450&dpr=2&txt=dpr2&q=75&auto=format' +
-                mono +
-                ' 2x,' +
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' +
-                poster_path +
-                '?w=300&h=450&dpr=3&txt=dpr3&q=75&auto=format' +
-                mono +
-                ' 3x,' +
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' +
-                poster_path +
-                '?w=300&h=450&dpr=4&txt=dpr4&q=75&auto=format' +
-                mono +
-                ' 4x,' +
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' +
-                poster_path +
-                '?w=300&h=450&dpr=5&txt=dpr5&q=75&auto=format' +
-                mono +
-                ' 5x'
-            }
-            src={
-                'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' + poster_path
-            }
-            alt={title}
-        /> */}
-
-        <Imgix 
+        {/* <Imgix 
         src={'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' + poster_path} 
         width={300}
         height={450}
         imgixParams={{ monochrome: mono, auto: "compress,format" }}
-        />
+        /> */}
+
+<Imgix
+        src={'https://jamie-dawson.imgix.net/image.tmdb.org/t/p/w1280' + poster_path} 
+        imgixParams={{ monochrome: mono, auto: "compress,format" }}
+
+        className="lazyload"
+        sizes="auto"
+        attributeConfig={{
+          src: "data-src",
+          srcSet: "data-srcset",
+          sizes: "data-sizes"
+        }}
+
+        htmlAttributes={{
+            src: "https://jdawsons3.imgix.net/photo-1543466835-00a7907e9de1.jpeg?w=10",
+          }}
+      />
 
         <div className='movie-info'>
             <h3>{title}</h3>
