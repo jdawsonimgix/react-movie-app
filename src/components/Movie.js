@@ -3,6 +3,7 @@ import Imgix from "react-imgix";
 import "lazysizes";
 // import a plugin
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
+import "lazysizes/plugins/attrchange/ls.attrchange";
 
 const setVoteClass = (vote) => {
   if (vote >= 8) {
