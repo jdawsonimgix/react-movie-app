@@ -39,7 +39,6 @@ const Movie = ({ title, poster_path, overview, vote_average, mono }) => (
 
     <div className='movie-info'>
       <h3>{title}</h3>
-      <h6>{mono}</h6>
       <span className={`tag ${setVoteClass(vote_average)}`}>
         {vote_average}
       </span>
